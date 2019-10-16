@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SRM University, Online Library Management</title>
+    
+</head>
+
+
+
+<body topmargin=0 >
+    <div>
+
+		<div>
+			<img src="images/SRMEmblem.jpg" Align="left">
+			<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Online Library Management</h1>
+		</div>
+        <div>
+					<br>
+					<h2>SRM Library</h2>
+                    <p>SRM University has an excellent library for the benefit of students, faculties and researchers. As one of the best established libraries according to International Standards, the University Library has a large collection of books covering various branches of Engineering and Technology, Medical and Health Sciences and Science and Humanities and its related fields.</p>
+
+					<p>The library is located in the 15-Storey University Administrative Block, and is spread over Ground + 3 floors of 1.50 Lakh sq ft area. The library building is
+					<ul>
+						<li>Fully air-conditioned and automated with RFID (Radio Frequency Identification) technology</li>
+						<li>Well protected with fire alarms and CCTV security systems</li>
+						<li>Equipped with reading halls in all the floors, with reference collection</li>
+					</ul>
+					</p>
+        </div>
+				<form action="CheckUserLogin.php" method="POST">
+				<table valign="left" border="0" cellspacing="4" cellpadding="4">
+					<tr><td><b>User Name</b></td><td><input type="text" name="uname"></tr>
+					<tr><td><b>Password</b></td><td><input type="password" name="pwd"></tr>
+					<tr><td></td><td><input type="submit" value=" Sign in " name="btnnewuser">&nbsp;&nbsp;&nbsp;<a href="NewUser.html">New User Sign up</a></tr>
+				</table>
+				</form>
+            </div>
+
+        <div class="footer">
+        	<p> &copy;  2017 Online Library | Developed by M.Anand, Asst. Prof. (Sr. G), Dept. of Information Technology, SRM University</p>
+        </div>
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SRM University, Online Library Management</title>
+</head>
+<body topmargin=0 >
+    <div>
+		<div>
+			<img src="images/SRMEmblem.jpg" align="left">
+			<br>
+			<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Online Library Management</h1>
+		</div>
+
+        <div>
+			<br><br>
+			<h2>Register New User</h2>
+                <form action='SaveNewUser.php' method='POST'>
+				<table valign="left" border="0" cellspacing="4" cellpadding="4">
+					<tr><td><b>Register No.</b></td><td><input type="text" name="regno"></td></tr>
+					<tr><td><b>User Name</b></td><td><input type="text" name="uname"></td></tr>
+					<tr><td><b>Password</b></td><td><input type="password" name="pwd"></td></tr>
+					<tr><td><b>Confirm Password</b></td><td><input type="password" name="cpwd"></td></tr>
+					<tr><td><b>Gender</b></td><td><input type="radio" name="gender" value="Male">Male<input type="radio" name="gender" value="Female">Female</td></tr>
+					<tr><td><b>Date of Birth</b></td><td><input type="text" name="dd" size="2">/<input type="text" name="mm" size="2">/<input type="text" name="yy" size="4"> dd/mm/yyyy</td></tr>
+					<tr><td><b>Department</b></td><td><select name="dept"><option>IT</option><option>CSE</option><option>SWE</option><option>ECE</option></td></tr>
+					<tr><td><b>E-mail Id.</b></td><td><input type="text" name="email"></tr>
+					<tr><td><b>Mobile No.</b></td><td><input type="text" name="mobile"></tr>
+					<tr><td></td><td><input type="submit" value=" Submit " name="btnsubmit"></td></tr>
+				</table>
+				</form>
+                </div>
+			</div>
+			
+        <div>
+        	<p> &copy;  2017 Online Library | Developed by M.Anand, Asst. Prof. (Sr. G), Dept. of Information Technology, SRM University</p>
+        </div>
+</body>
+</html>
+
+
+
+        body{
+            font: 12px verdana, sans-serif; 
+            margin: 0px;
+		}
+		.container{
+            width: 1024px;
+            margin: 0 auto;
+			background-color: #bbd2df;
+        }
+        .header1{
+            background-color: #679BB7; 
+			min-height: 20px;
+			background: url(../images/header_img.jpg);
+        }
+		.header1 h1{
+            font-size: 18px; 
+            margin: 0px;
+        }
+        .header2{
+		    background-color: #ffffff; 
+			min-height: 75px;    
+			margin: 0px;
+        }
+		.header2 h1{
+            font-size: 28px; 
+            color: #7a00cc;
+			margin-top:5px;
+			margin-left:20px;
+        }
+		.header2 img{
+            float: left;
+			font-size:18px;
+            margin: 0px;
+        }
+        .header3{
+            background-color: #679BB7; 
+			min-height: 50px;
+			background: url(../images/header_img.jpg);
+        }
+        .sidebar1{
+            float: left;
+            width: 262px; 
+            min-height: 425px;
+            text-align: left;
+            background-color: #bbd2df;
+        }
+
+        .sidebar1 .nav{
+            padding: 5px;
+        }
+
+		.sidebarinfo1{
+            width: 233px; 
+            min-height: 20px;
+            text-align: left;
+			border: 1px solid white;
+			padding: 3px;
+			border-radius: 5px;
+			background: #e6f2ff;
+		}
+		.sidebar1 .nav table {
+			border-collapse: collapse;
+		}
+		
+        .nav ul{
+            float: left; 
+            list-style: none; 
+            display: inline; 
+            padding: 0px; 
+            margin: 0px;
+        }
+        .nav ul li{
+            margin-bottom: 5px; 
+            width: 100%; 
+            float: left;
+        }
+        .nav ul li a{
+            color: #3d677e;
+        }
+        .nav ul li a:hover{
+            text-decoration: none;
+        }
+        .content{
+            float: left;
+            width: 500px;
+            min-height: 400px;
+			object-fit:cover;
+            background-color: #e6f2ff;
+			font-size: 12px; 
+        }
+        .content .section{
+            padding: 0px;
+        }
+        .content h2{
+            font-size: 16px; 
+            margin: 0px;
+        }
+
+		.sidebar2{
+            float: left;
+            width: 262px; 
+            min-height: 425px;
+            text-align: left;
+            background-color: #bbd2df;
+        }
+
+		.sidebar2 .nav{
+            padding: 10px 12px;
+        }
+
+		.sidebarinfo2{
+            width: 210px; 
+            min-height: 150px;
+            text-align: left;
+			border: 1px solid white;
+			padding: 3px;
+			border-radius: 10px;
+			background: #e6f2ff;
+		}
+
+        .clearfix{
+            clear: both;
+        }
+
+        .footer{
+            background-color: #679BB7; 
+			color: #ffffff;
+			background: url(../images/footer_img.jpg);
+            padding: 10px 0;
+        }
+        .footer p{
+            text-align: center; 
+            margin: 5px;
+        }
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SRM University, Online Library Management</title>
+    <link rel="stylesheet" type="text/css" href="css/MyStyle.css">
+</head>
+<body topmargin=0 >
+    <div class="container">
+	    <div class="header1">
+        </div>
+
+		<div class="header2">
+			<img src="images/SRMemblem.jpg">
+			<br>
+	<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Online Library Management</h1>
+		</div>
+
+		<div class="header3">
+        </div>
+
+    	<div class="wrapper">
+			<div class="sidebar2">
+				<div class="nav">
+					<table style="width:100%;" valign="left" border="0" cellspacing="4" cellpadding="4">
+						<tr height="7px"></tr>
+						<tr><td><div class="sidebarinfo2" style="background: url(images/SRM1.jpg)"></div></td></tr>
+						<tr height="25px"></tr>
+						<tr><td><div class="sidebarinfo2" style="background: url(images/SRM5.jpg)"></div></td></tr>
+					</table>
+				</div>
+			</div>
+            
+			<div class="content" style="background-color: #bbd2ff;">
+                <div class="section">
+					<br><br>
+					<h2>SRM Library</h2>
+                    <p>SRM University has an excellent library for the benefit of students, faculties and researchers. As one of the best established libraries according to International Standards, the University Library has a large collection of books covering various branches of Engineering and Technology, Medical and Health Sciences and Science and Humanities and its related fields.</p>
+
+					<p>The library is located in the 15-Storey University Administrative Block, and is spread over Ground + 3 floors of 1.50 Lakh sq ft area. The library building is
+					<ul>
+						<li>Fully air-conditioned and automated with RFID (Radio Frequency Identification) technology</li>
+						<li>Well protected with fire alarms and CCTV security systems</li>
+						<li>Equipped with reading halls in all the floors, with reference collection</li>
+					</ul>
+					</p>
+                </div>
+				<form action="CheckUserLogin.php" method="POST">
+				<table valign="left" border="0" cellspacing="4" cellpadding="4">
+					<tr><td><b>User Name</b></td><td><input type="text" name="uname"></tr>
+					<tr><td><b>Password</b></td><td><input type="password" name="pwd"></tr>
+					<tr><td></td><td><input type="submit" value=" Sign in " name="btnnewuser">&nbsp;&nbsp;&nbsp;<a href="NewUser.html">New User Sign up</a></tr>
+				</table>
+				</form>
+            </div>
+			
+			<div class="sidebar2">
+				<div class="nav">
+					<table style="width:100%;" valign="left" border="0" cellspacing="4" cellpadding="4">
+						<tr height="7px"></tr>
+						<tr><td><div class="sidebarinfo2" style="background: url(images/SRM6.jpg)"></div></td></tr>
+						<tr height="25px"></tr>
+						<tr><td><div class="sidebarinfo2" style="background: url(images/SRM4.jpg)"></div></td></tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="clearfix"> 
+			</div>
+        </div>
+        <div class="footer">
+        	<p> &copy;  2017 Online Library | Developed by M.Anand, Asst. Prof. (Sr. G), Dept. of Information Technology, SRM University</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SRM University, Online Library Management</title>
+    <link rel="stylesheet" type="text/css" href="css/MyStyle.css">
+</head>
+<body topmargin=0 >
+    <div class="container">
+	    <div class="header1">
+        </div>
+		<div class="header2">
+			<img src="images/SRMemblem.jpg">
+			<br>
+	<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Online Library Management</h1>
+		</div>
+		<div class="header3">
+        	</div>
+
+    	<div class="wrapper">
+			<div class="sidebar2">
+				<div class="nav">
+					<table style="width:100%;" valign="left" border="0" cellspacing="4" cellpadding="4">
+						<tr height="7px"></tr>
+						<tr><td><div class="sidebarinfo2" style="background: url(images/SRM1.jpg)"></div></td></tr>
+						<tr height="25px"></tr>
+						<tr><td><div class="sidebarinfo2" style="background: url(images/SRM5.jpg)"></div></td></tr>
+					</table>
+				</div>
+			</div>
+            
+			<div class="content" style="background-color: #bbd2ff;">
+                <div class="section">
+					<br><br>
+					<center><h2>Register New User</h2></center>
+                <form action='SaveNewUser.php' method='POST'>
+				<table valign="left" border="0" cellspacing="4" cellpadding="4">
+					<tr><td><b>Register No.</b></td><td><input type="text" name="regno"></td></tr>
+					<tr><td><b>User Name</b></td><td><input type="text" name="uname"></td></tr>
+					<tr><td><b>Password</b></td><td><input type="password" name="pwd"></td></tr>
+					<tr><td><b>Confirm Password</b></td><td><input type="password" name="cpwd"></td></tr>
+					<tr><td><b>Gender</b></td><td><input type="radio" name="gender" value="Male">Male<input type="radio" name="gender" value="Female">Female</td></tr>
+					<tr><td><b>Date of Birth</b></td><td><input type="text" name="dd" size="2">/<input type="text" name="mm" size="2">/<input type="text" name="yy" size="4"> dd/mm/yyyy</td></tr>
+					<tr><td><b>Department</b></td><td><select name="dept"><option>IT</option><option>CSE</option><option>SWE</option><option>ECE</option></td></tr>
+					<tr><td><b>E-mail Id.</b></td><td><input type="text" name="email"></tr>
+					<tr><td><b>Mobile No.</b></td><td><input type="text" name="mobile"></tr>
+					<tr><td></td><td><input type="submit" value=" Submit " name="btnsubmit"></td></tr>
+				</table>
+				</form>
+                </div>
+			</div>
+			
+			<div class="sidebar2">
+				<div class="nav">
+					<table style="width:100%;" valign="left" border="0" cellspacing="4" cellpadding="4">
+						<tr height="7px"></tr>
+						<tr><td><div class="sidebarinfo2" style="background: url(images/SRM6.jpg)"></div></td></tr>
+						<tr height="25px"></tr>
+						<tr><td><div class="sidebarinfo2" style="background: url(images/SRM4.jpg)"></div></td></tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="clearfix"> 
+			</div>
+        </div>
+        <div class="footer">
+        	<p> &copy;  2017 Online Library | Developed by M.Anand, Asst. Prof. (Sr. G), Dept. of Information Technology, SRM University</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<?php 
+	extract($_POST);
+	$mysqli = new mysqli('localhost', 'root', 'server', 'db_srm_library');
+
+	if($mysqli->connect_errno > 0){
+   		die('Unable to connect to database [' . $db->connect_error . ']');
+	}
+
+	$dob=$dd.'/'.$mm.'/'.$yy;
+
+	$query = "INSERT INTO user_login VALUES 
+('$regno','$uname','$pwd','$gender','$dob','$dept','$email','$mobile')";
+
+	$insert_row = $mysqli->query($query);
+
+	if($insert_row){
+		  header("location:RegistrationSuccess.html");
+	}
+	else{
+   		die('Error : ('. $mysqli->errno .') '. $mysqli->error);
+	}
+     ?>
+
+<div class="content" style="background-color: #bbd2ff;">
+                <div class="section">
+		<br><br>
+		<center>
+			<h2>New User Successfully Registered!</h2><br><br>
+            		<a href="UserLogin.html">Login</a>
+		</center>
+                </div>
+	</div>
+
+
+
+<?php
+
+$host="localhost"; // Host name
+$username="root"; // Mysql username
+$password="server"; // Mysql password
+$db_name="db_srm_library"; // Database name
+$tbl_name="user_login"; // Table name
+
+// Connect to server and select databse.
+mysql_connect("$host", "$username", "$password")or die("cannot connect");
+mysql_select_db("$db_name")or die("cannot select DB");
+
+// Define $myusername and $mypassword 
+$myusername=$_POST['uname'];
+$mypassword=$_POST['pwd'];
+
+$sql="SELECT * FROM $tbl_name WHERE uname='$myusername' and pwd='$mypassword'";
+$result=mysql_query($sql);
+
+// Mysql_num_row is counting table row
+$count=mysql_num_rows($result);
+
+// If result matched $myusername and $mypassword, table row must be 1 row
+if($count==1){
+	//	$row=mysql_fetch_row($result);
+	//	$sname=$row[0];
+	//	print("<h1>Welcome, $sname!<br></h1>");
+	//	echo "<h2>Login Success!!!</h2>";
+	header("location:UserMainMenu.php");
+}
+else {
+	//echo "<h2>Login Failed!!!</h2>";
+	header("location:UserLogin.html");
+}
+?>
+
+
+<html>
+  <head>
+    <title>Javascript Login Form Validation</title>
+    <!-- Include CSS File Here -->
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- Include JS File Here -->
+    <script src="js/login.js"></script>
+  </head>
+<body>
+<div class="container">
+<div class="main">
+<h2>Javascript Login Form Validation</h2>
+<form id="form_id" method="post" name="myform">
+<label>User Name :</label>
+<input type="text" name="username" id="username"/>
+<label>Password :</label>
+<input type="password" name="password" id="password"/>
+<input type="button" value="Login" id="submit" onclick="validate()"/>
+</form>
+</div>
+</div>
+</body>
+</html>
+
+ 
+login.js
+var attempt = 3; // Variable to count number of attempts.
+// Below function Executes on click of login button.
+function validate(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if ( username == "Formget" && password == "formget#123"){
+alert ("Login successfully");
+window.location = "success.html"; // Redirecting to other page.
+return false;
+}
+else{
+attempt --;// Decrementing by one.
+alert("You have left "+attempt+" attempt;");
+// Disabling fields after 3 attempts.
+if( attempt == 0){
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}
+
+
+<html>
+<head>
+    <title>User Login</title>
+</head>
+<body>
+<form method="post" action="Login_Check.php">
+	<H1>User Login</h1>
+	User Name:<input type="text" name="uname" value=<?php echo Cookie_val(1) ?> > <br>
+	Password:<input type="password" name="pwd" value=<?php echo Cookie_val(2) ?> > <br>
+	<input type="checkbox" name="remuser">Remember Password<br>
+	<input type="submit" value="Login">
+</form>
+</body>
+	<?php
+		function Cookie_val($ch){
+		if ($ch==1)
+		{	
+			if (isset($_COOKIE['UName']))
+			{
+				return $_COOKIE['UName'];
+			}
+			else 
+				return;
+		}
+		else
+		{
+			if (isset($_COOKIE['Pwd']))
+			{
+				return $_COOKIE['Pwd'];
+			}
+			else 
+				return;
+		}
+		}
+	?>
+</html>
+
+Login_Check.php
+
+<?php
+
+$host="localhost"; // Host name
+$username="root"; // Mysql username
+$password="server"; // Mysql password
+$db_name="studb"; // Database name
+$tbl_name="Login"; // Table name
+
+mysql_connect("$host", "$username", "$password")or die("cannot connect");
+mysql_select_db("$db_name")or die("cannot select DB");
+
+$myusername=$_POST['uname'];
+$mypassword=$_POST['pwd'];
+
+$sql="SELECT * FROM $tbl_name WHERE uname='$myusername' and pwd='$mypassword'";
+$result=mysql_query($sql);
+
+$count=mysql_num_rows($result);
+
+if($count==1){
+	$row=mysql_fetch_row($result);
+ 	$sname=$row[0];
+	print("<h1>Welcome, $sname!<br></h1>");
+	echo "<h2>Login Success!!!</h2>";
+	
+	if (isset($_POST['remuser'])){
+		setcookie("UName",$myusername,time()+60*60*24);
+		setcookie("Pwd",$mypassword,time()+60*60*24);
+	}
+	else
+	{
+		setcookie("UName","",time()-5);
+		setcookie("Pwd","",time()-5);
+	}
+
+//	header("location:login_success.html");
+}
+else {
+	echo "<h2>Login Failed!!!</h2>";
+	//header("location:login_failed.php");
+}
+?>
+
+
+<html>
+<head>
+<title>New User Registration</title>
+</head>
+<style>
+div.ex {
+	text-align: right width:300px;
+	padding: 10px;
+	border: 5px solid grey;
+	margin: 0px
+}
+</style>
+<body>
+	<h1>Registration Form</h1>
+	<div class="ex">
+		<form action="UserRegistration" method="post">
+			<table style="with: 50%">
+				<tr>
+					<td>Full Name</td>
+					<td><input type="text" name="stuname" /></td>
+				</tr>
+				<tr>
+					<td>Address</td>
+					<td><input type="text" name="address" /></td>
+				</tr>
+				<tr>
+					<td>Age</td>
+					<td><input type="text" name="age" /></td>
+				</tr>
+				<tr>
+					<td>Qualification</td>
+					<td><input type="text" name="qual" /></td>
+				</tr>
+				<tr>
+					<td>Percentage</td>
+					<td><input type="text" name="percent" /></td>
+				</tr>
+				<tr>
+					<td>Year Passed</td>
+					<td><input type="text" name="yop" /></td>
+				</tr>
+			</table>
+			<input type="submit" value="register" />
+		</form>
+	</div>
+</body>
+</html>
+
+
+UserRegistration.java
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class UserRegistration extends HttpServlet {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		String name = request.getParameter("fullname");
+		String Addr = request.getParameter("address");
+		String age = request.getParameter("age");
+		String Qual = request.getParameter("qual");
+		String Persent = request.getParameter("percent");
+		String Year = request.getParameter("yop");
+		if(name.isEmpty()||Addr.isEmpty()||age.isEmpty()||Qual.isEmpty()||Persent.isEmpty() 
+|| Year.isEmpty())
+		{
+			RequestDispatcher rd = 
+request.getRequestDispatcher("registration.jsp");
+			out.println("<font color=red>Please fill all the fields</font>");
+			rd.include(request, response);
+		}
+		else
+		{
+			RequestDispatcher rd = request.getRequestDispatcher("home.jsp");
+			rd.forward(request, response);
+		}
+	}
+}
+
+home.jsp
+
+<head>
+<title>Display</title>
+<style>
+table#nat{
+	width: 50%;
+	background-color: #c48ec5;
+}
+</style>
+</head>
+<body>  
+<% String name =  request.getParameter("fullname");
+	String Addr = request.getParameter("address");
+	String age = request.getParameter("age");
+	String Qual = request.getParameter("qual");
+	String Persent = request.getParameter("percent");
+	String Year = request.getParameter("yop"); %>
+<table id ="nat">
+<tr>
+	<td>Full Name</td>
+	<td><%= name %></td>
+</tr>
+<tr>
+	<td>Address</td>
+	<td><%= Addr %></td>
+</tr>
+<tr>
+	<td>Age</td>
+	<td><%= age %></td>
+</tr>
+<tr>
+	<td>Qualification</td>
+	<td><%= Qual %></td>
+</tr>
+<tr>
+	<td>Percentage</td>
+	<td><%= Persent %></td>
+</tr>
+<tr>
+	<td>Year of Passout</td>
+	<td><%= Year %></td>
+</tr>
+</table>
+</body>
+</html>
+
+
+books.xml
+
+<books>
+   <book>
+      <name>Padam History</name>
+      <author>ZARA</author>
+      <price>100</price>
+   </book>
+   
+   <book>
+      <name>Great Mistry</name>
+      <author>NUHA</author>
+      <price>2000</price>
+   </book>
+</books>
+
+main.jsp
+
+<%@ taglib prefix = "c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "x" uri="http://java.sun.com/jsp/jstl/xml" %>
+ 
+<html>
+   <head>
+      <title>JSTL x:parse Tags</title>
+   </head>
+
+   <body>
+      <h3>Books Info:</h3>
+      <c:import var = "bookInfo" url="http://localhost:8080/books.xml"/>
+ 
+      <x:parse xml = "${bookInfo}" var = "output"/>
+      <b>The title of the first book is</b>: 
+      <x:out select = "$output/books/book[1]/name" />
+      <br>
+      
+      <b>The price of the second book</b>: 
+      <x:out select = "$output/books/book[2]/price" />
+   </body>
+</html>
+
+
+
+HelloWorld.java
+	package com.javatpoint;  
+	import javax.jws.WebMethod;  
+	import javax.jws.WebService;  
+	import javax.jws.soap.SOAPBinding;  
+	import javax.jws.soap.SOAPBinding.Style;  
+	//Service Endpoint Interface  
+	@WebService  
+	@SOAPBinding(style = Style.RPC)  
+	public interface HelloWorld{  
+	    @WebMethod String getHelloWorldAsString(String name);  
+	}  
+
+HelloWorldImpl.java
+	package com.javatpoint;  
+	import javax.jws.WebService;  
+	//Service Implementation  
+	@WebService(endpointInterface = "com.javatpoint.HelloWorld")  
+	public class HelloWorldImpl implements HelloWorld{  
+	    @Override  
+	    public String getHelloWorldAsString(String name) {  
+	        return "Hello World JAX-WS " + name;  
+	    }  
+	}  
+
+Publisher.java
+	package com.javatpoint;  
+	import javax.xml.ws.Endpoint;  
+	//Endpoint publisher  
+	public class HelloWorldPublisher{  
+	    public static void main(String[] args) {  
+	       Endpoint.publish("http://localhost:7779/ws/hello", new HelloWorldImpl());  
+	        }  
+	}  
+
+View generated WSDL:
+After running the publisher code, you can see the generated WSDL file by visiting the URL:
+http://localhost:7779/ws/hello?wsdl  
+
+JAX-WS Client Code
+HelloWorldClient.java
+	package com.javatpoint;  
+	import java.net.URL;  
+	import javax.xml.namespace.QName;  
+	import javax.xml.ws.Service;  
+	public class HelloWorldClient{  
+	    public static void main(String[] args) throws Exception {  
+	    URL url = new URL("http://localhost:7779/ws/hello?wsdl");  
+	   
+	        //1st argument service URI, refer to wsdl document above  
+.	    //2nd argument is service name, refer to wsdl document above  
+.	        QName qname = new QName("http://javatpoint.com/", 
+"HelloWorldImplService");  
+	        Service service = Service.create(url, qname);  
+	        HelloWorld hello = service.getPort(HelloWorld.class);  
+	        System.out.println(hello.getHelloWorldAsString("javatpoint rpc"));  
+	     }  
+	 }  
